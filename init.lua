@@ -1,0 +1,2 @@
+require("valkyrie")
+print("hello")
