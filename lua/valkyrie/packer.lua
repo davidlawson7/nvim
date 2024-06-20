@@ -33,5 +33,35 @@ return require('packer').startup(function(use)
   }
 
   use('tpope/vim-fugitive')
+
+  -- LSP Support
+  use {
+	  "williamboman/mason.nvim",
+	  "williamboman/mason-lspconfig.nvim",
+	  "neovim/nvim-lspconfig"
+  }
+
+  -- Autocomplete
+  use { 
+	  "hrsh7th/nvim-cmp",
+	  "hrsh7th/cmp-nvim-lsp",
+	  "hrsh7th/cmp-buffer",
+	  "hrsh7th/cmp-path",
+	  "hrsh7th/cmp-nvim-lsp",
+	  "hrsh7th/cmp-nvim-lua"
+  }
+
+  use { 'saadparwaiz1/cmp_luasnip' }
+
+  -- Snippets
+  use({
+	  "L3MON4D3/LuaSnip",
+	  -- follow latest release.
+	  tag = "v2.3.0", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+	  -- install jsregexp (optional!:).
+	  run = "make install_jsregexp"
+  })
+
+  use { "rafamadriz/friendly-snippets" }
 end
 )

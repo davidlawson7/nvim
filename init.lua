@@ -1,2 +1,1 @@
 require("valkyrie")
-print("hello")
