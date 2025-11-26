@@ -20,7 +20,7 @@ local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-	ensure_installed = {'lua_ls', 'tsserver', 'eslint', 'jsonls', 'rust_analyzer', 'rubocop', 'gopls', 'elixirls', 'terraformls'},
+	ensure_installed = {'lua_ls', 'ts_ls', 'eslint', 'jsonls', 'rust_analyzer', 'rubocop', 'gopls', 'elixirls', 'terraformls'},
 	handlers = {
 		function(server_name)
 			require('lspconfig')[server_name].setup({

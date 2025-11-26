@@ -21,3 +21,5 @@ vim.keymap.set("n", "Q", "<nop>")
 
 -- Switch between projects using tmux
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+
+vim.diagnostic.config({ virtual_text = true })

@@ -13,12 +13,28 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  use { 
-	  "rose-pine/neovim",
-	  as = "rose-pine", 
-	  config = function()
-		  vim.cmd('colorscheme rose-pine')
-	  end
+  use {
+    "rose-pine/neovim",
+    as = "rose-pine-moon", 
+    config = function()
+        vim.cmd('colorscheme rose-pine-moon')
+    end
+  }
+
+  use {
+    "sainnhe/everforest",
+    as = "everforest",
+    config = function()
+        -- Optionally configure and load the colorscheme
+        -- directly inside the plugin declaration.
+        vim.g.everforest_enable_italic = true
+        vim.cmd.colorscheme('everforest')
+    end
+  }
+
+  use {
+    "rebelot/kanagawa.nvim",
+    as = "kanagawa",
   }
 
   use {
@@ -36,8 +52,8 @@ return require('packer').startup(function(use)
 
   -- LSP Support
   use {
-	  "williamboman/mason.nvim",
-	  "williamboman/mason-lspconfig.nvim",
+	  "mason-org/mason-lspconfig.nvim",
+	  "mason-org/mason.nvim",
 	  "neovim/nvim-lspconfig"
   }
 
@@ -47,7 +63,6 @@ return require('packer').startup(function(use)
 	  "hrsh7th/cmp-nvim-lsp",
 	  "hrsh7th/cmp-buffer",
 	  "hrsh7th/cmp-path",
-	  "hrsh7th/cmp-nvim-lsp",
 	  "hrsh7th/cmp-nvim-lua"
   }
 
