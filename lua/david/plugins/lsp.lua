@@ -35,7 +35,7 @@ return {
                 'ts_ls',
                 'eslint',
                 'jsonls',
-                'rubocop',
+                'rubocop@1.73.0',
                 'gopls',
                 'elixirls',
             },
